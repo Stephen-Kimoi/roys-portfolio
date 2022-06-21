@@ -1,5 +1,6 @@
 import React,{ useState } from 'react'; 
 import video from '/home/steve/react-website-practice/src/components/videos/video.mp4'; 
+import { Button } from '../ButtonElement';
 import { 
     HeroContainer, 
     HeroBg, 
@@ -8,6 +9,8 @@ import {
     HeroH1, 
     HeroP, 
     HeroBtnWrapper, 
+    ArrowFoward, 
+    ArrowRight
 
  } from './HeroElements'; 
 
@@ -29,9 +32,9 @@ const Hero = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?
             </HeroP>
             <HeroBtnWrapper>
-                {/* <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>
+                <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>
                     Get started {hover ? <ArrowFoward /> : <ArrowRight />}
-                </Button> */}
+                </Button>
             </HeroBtnWrapper>
         </HeroContent>
     </HeroContainer>
