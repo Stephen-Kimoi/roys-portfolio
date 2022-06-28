@@ -1,12 +1,14 @@
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom'; 
+import { BrowserRouter, Route, Routes} from 'react-router-dom'; 
 import Home from './components/pages';
+
+// React router not working, chack on that
 
 function App() {
   return (
-    <Router>
-      <Home /> 
-    </Router>
+    <BrowserRouter>  
+        <Home />
+    </BrowserRouter>
   );
 }
 
