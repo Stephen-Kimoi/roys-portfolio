@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" 
-    /> 
+    />  -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet" /> 
     <link rel="stylesheet" href="styles/styles.css">
@@ -19,10 +19,19 @@
 
     <!-- JSDelivr -->
     <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
+
+    <!-- Font awesome --> 
+    <script src="https://kit.fontawesome.com/5698813408.js" crossorigin="anonymous"></script>
+
+   
     
-    <title>My Portfolio</title> 
+    <title>Roy Kiprop</title> 
 </head>
-<body>  
+<body>   
+    <!-- Preloader --> 
+    <div id="preloader">
+        <img src="./images/Jol0.gif" alt="preloader">
+    </div>
     <!-- Mobile navbar -->
     <div class="nav-mobile" id="nav_mobile">
         <a href="#about">About</a> 
@@ -39,8 +48,8 @@
         </div>
 
        <div class="hamburger-menu">
-          <span class="open" id="open"><i class="fa-solid fa-bars"></i></span> 
-          <span class="close" id="close"><i class="fa-solid fa-xmark"></i></span>
+          <p class="open" id="open"><img src="./images/hamburger.svg" alt="close icon"></p> 
+          <p class="close" id="close"><img src="./images/close.svg" alt="close icon"></p>
        </div>
 
        <div class="nav-content">
@@ -54,9 +63,12 @@
 
     <!-- MAIN CONTENT  --> 
     <div class="main-content"> 
-        <h1>Hello, I'm Roy</h1> 
-        <!-- <h1 class="intro">I am a student and a certified cloud practitioner</h1>  -->
-        <p class="main-description"><span class="typing"></span></p>
+        <div class="main-container">
+            <h1 class="main-header">
+               <span class="text">Hello, I'm Roy</span>
+            </h1>
+            <p class="main-description"><span class="typing text"></span></p>
+        </div>
     </div> 
 
     <div class="about-section" id="about">
@@ -66,7 +78,7 @@
                 <img src="./images/me1.jpeg" alt="Roy Kiprop">
             </div>
             <div class="about-info">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quas inventore amet facere facilis id architecto repellendus aliquam, ut esse, soluta at nesciunt iusto perspiciatis dolores maxime ex? Cumque, provident?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quas inventore amet facere facilis id architecto. Lorem ipsum dolor sit amet.</p>
             </div>
          </div>
     </div>
@@ -95,6 +107,8 @@
                     alt="project" />
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, eligendi cupiditate? Similique voluptate necessitatibus dignissimos repudiandae quam eveniet eum placeat? </p>
             </a>
+
+            
         </div>
         <!-- <a 
         href="#" 
@@ -119,6 +133,7 @@
                 <h2>OCI Foundations associate</h2> 
                 <img src="./images/aws_cert1.jpeg" alt="OCI foundations associate">
             </a>
+            
         </div>
     </div>
 
@@ -133,7 +148,7 @@
                target="_blank" 
                class="contact-details-link"
             >
-               <i class="fa-brands fa-linkedin-in"></i>LinkedIn
+                <i class="fa-brands fa-linkedin-in"></i>LinkedIn
             </a> 
 
             <a href="#"
@@ -159,8 +174,13 @@
         <h5 class="footer-copy">&copy;RoyKiprop</h5>
     </footer>
     
-
+    <!-- Animate JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    
+    <!-- GSAP cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <script src="app.js"></script>
 </body>
 </html>

@@ -29,3 +29,22 @@ var typed = new Typed(('.typing'), {
     BackSpeed:60, 
     loop:true 
 })
+
+// Preloader  
+const preloader = document.getElementById('preloader') 
+
+window.addEventListener('load', () => {
+    preloader.style.display = 'none'
+})
+ 
+// setTimeout(() => {
+//     preloader.style.display = 'none'
+// },3000)
+
+// GSAP animations
+const t1 = gsap.timeline({defaults: { ease: "power1.out"}}); 
+
+t1.to('.text', {y: 0, duration: 2, stagger: 0.25})
+t1.fromTo('.nav-logo', {opacity:0}, {opacity: 1, duration: 2}, '-=2')
+t1.fromTo('.hamburger-menu', {opacity:0}, {opacity: 1, duration: 2}, '-=2')
+t1.fromTo('.nav-content', {opacity:0}, {opacity: 1, duration: 2}, '-=2')
