@@ -21,23 +21,27 @@
     <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
 
     <!-- Font awesome --> 
-    <script src="https://kit.fontawesome.com/5698813408.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
    
     
     <title>Roy Kiprop</title> 
 </head>
-<body>   
+<body> 
+
+    <div class="container">
+
     <!-- Preloader --> 
     <div id="preloader">
         <img src="./images/Jol0.gif" alt="preloader">
     </div>
+
     <!-- Mobile navbar -->
     <div class="nav-mobile" id="nav_mobile">
-        <a href="#about">About</a> 
-        <a href="#work">Work</a> 
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a> 
+        <a id="about-mob" href="#about">About</a> 
+        <a id="work-mob" href="#work">Work</a> 
+        <a id="cert-mob" href="#certifications">Certifications</a>
+        <a id="contact-mob" href="#contact">Contact</a> 
    </div>
 
     <!-- NAVIGATION CONTENT -->
@@ -48,22 +52,22 @@
         </div>
 
        <div class="hamburger-menu">
-          <p class="open" id="open"><img src="./images/hamburger.svg" alt="close icon"></p> 
-          <p class="close" id="close"><img src="./images/close.svg" alt="close icon"></p>
+          <p class="open" id="open"><i class="fa-solid fa-bars"></i></p> 
+          <p class="close" id="close"><i class="fa-solid fa-xmark"></i></p>
        </div>
 
        <div class="nav-content">
-            <a href="#about">About</a> 
-            <a href="#work">Work</a> 
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a> 
+            <a class="smScroll" href="#about">About</a> 
+            <a class="smScroll" href="#work">Work</a> 
+            <a class="smScroll" href="#certifications">Certifications</a>
+            <a class="smScroll" href="#contact">Contact</a> 
        </div>
 
     </nav> 
 
     <!-- MAIN CONTENT  --> 
     <div class="main-content"> 
-        <div class="main-container">
+        <div class="main-container" id="main_container">
             <h1 class="main-header">
                <span class="text">Hello, I'm Roy</span>
             </h1>
@@ -71,11 +75,12 @@
         </div>
     </div> 
 
-    <div class="about-section" id="about">
+    <!-- ABOUT ME -->
+    <div class="about-section reveal" id="about">
         <h2>ABOUT ME</h2>
          <div class="about-container">
             <div class="about-image">
-                <img src="./images/me1.jpeg" alt="Roy Kiprop">
+                <img src="./images/me.png" alt="Roy Kiprop">
             </div>
             <div class="about-info">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quas inventore amet facere facilis id architecto. Lorem ipsum dolor sit amet.</p>
@@ -84,7 +89,7 @@
     </div>
 
     <!-- PROJETCS PART --> 
-    <div class="projects-part" id="work"> 
+    <div class="projects-part reveal" id="work"> 
        <div class="projects-intro">
           <h3>These are some of my projects</h3> 
        </div> 
@@ -120,45 +125,45 @@
     </div>
 
     <!-- CERTIFICATIONS SECTION -->
-    <div class="certifications-section" id="certifications"> 
+    <div class="certifications-section reveal" id="certifications"> 
         <div class="certifications-intro">
             <h4>CERTIFICATIONS</h4>
         </div>
         <div class="certifications-container">
             <a class="certification" href="">
                 <h2>AWS Cloud Practitioner</h2> 
-                <img src="./images/aws_cert1.jpeg" alt="AWS cloud practitioner">
+                <img src="./images/aws_cert.jpeg" alt="AWS cloud practitioner">
             </a> 
             <a class="certification" href="">
                 <h2>OCI Foundations associate</h2> 
-                <img src="./images/aws_cert1.jpeg" alt="OCI foundations associate">
+                <img src="./images/aws_cert.jpeg" alt="OCI foundations associate">
             </a>
             
         </div>
     </div>
 
     <!-- CONTACT SECTION --> 
-    <section class="contact-section" id="contact">
+    <section class="contact-section reveal" id="contact">
         <div class="contact-section-header">
             <h4>You can reach me via the following platforms</h4> 
         </div> 
         <div class="contact-details">
 
-            <a href="#"
+            <a href="https://www.linkedin.com/in/roy-kiprop"
                target="_blank" 
                class="contact-details-link"
             >
                 <i class="fa-brands fa-linkedin-in"></i>LinkedIn
             </a> 
 
-            <a href="#"
+            <a href="https://twitter.com/kiprop_roy?t=5N8ROf0-DiCzZGzF1193KQ&s=08"
                target="_blank" 
                class="contact-details-link"
             >
               <i class="fab fa-twitter-square"></i>Twitter
             </a> 
 
-            <a href="#"
+            <a href="mailto:roykiprop590@gmail.com"
                target="_blank"
                class="contact-details-link"
             >
@@ -173,6 +178,8 @@
         <h5 class="footer-vision">Fulfilling your tech needs</h5>
         <h5 class="footer-copy">&copy;RoyKiprop</h5>
     </footer>
+
+    </div>  
     
     <!-- Animate JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
@@ -180,6 +187,11 @@
     <!-- GSAP cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- JQuery -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+     
+    <!-- Smooth scroll --> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
 
     <script src="app.js"></script>
 </body>

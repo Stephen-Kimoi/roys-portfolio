@@ -14,7 +14,7 @@
     --main-white: #f0f0f0;; 
     --main-grey: #303841;  
     --main-red: #be3144;
-    --main-transition: all 2s ease-out; 
+    --main-transition: all 2s ease; 
 }  
 
 a {
@@ -29,7 +29,8 @@ img {
 
 body {
     font-family: 'Poppins', sans-serif;
-} 
+    background-color: var(--main-grey);
+}  
 
 /* 
   =================================================================
@@ -50,7 +51,6 @@ body {
     width: 20%; 
     margin: 5rem auto;
 } 
-
 /* 
   =================================================================
   NAVIGATION BAR 
@@ -109,7 +109,8 @@ body {
         display: none; 
     } 
     .nav-mobile {
-        display: none;
+        position: fixed;
+        display: flex;
         width: 100%; 
         height: 100vh;  
         background-color: var(--main-grey);
@@ -119,18 +120,18 @@ body {
         align-items: center; 
         text-align: center;
         font-size: 2rem; 
-        transition: var(--main-transition);
+        transition: var(--main-transition); 
+        top: -100%;
     }
     .close {
         display: none;
     }
-    .close img {
-        width: 40%; 
+    .close i {
+        font-size: 1.5rem;
         color: var(--main-white);
-        margin-left: 1rem;
     }
-    .open img {
-        width: 90%; 
+    .open i {
+        font-size: 1.5rem;
         color: var(--main-white);
     }
     .nav-mobile a {
@@ -138,10 +139,10 @@ body {
     }
     .hamburger-menu {
         display: block;
-        width: 50px;
+        width: 30px;
     }
     .open-nav {
-       display: flex;
+       top: 0;
     }
     .close-icon {
         display: none;
@@ -226,7 +227,7 @@ body {
 */ 
 .about-section {
     width: 100%; 
-    height: 90vh;
+    height: 100vh;
     background-color: var(--main-grey);
     display: flex; 
     flex-direction: column;
@@ -378,7 +379,7 @@ body {
     justify-content: center;
     width: 100%; 
     background-color: var(--main-grey);
-    padding: 2rem;
+    padding: 3rem;
 }  
 .certifications-intro {
     color: var(--main-white); 
@@ -432,9 +433,9 @@ body {
 }
 
 
-@media all and (min-width: 390px) and (max-width: 844px) {
+@media all and (max-width: 400px) {
     .certifications-container {
-        padding: 2.5rem;
+        padding-right: 2.5rem;
     }
 }
 
@@ -506,4 +507,20 @@ body {
 } 
 .footer-disclaimer {
     font-size: 0.5rem;
+}
+
+/* 
+   ==============================================================================
+   REVEAL ELEMENTS ON SCROLL 
+   ============================================================================== 
+*/
+.reveal {
+    position: relative; 
+    transform: translateY(150px); 
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.reveal-active {
+    transform: translateY(0px); 
+    opacity: 1;
 }
